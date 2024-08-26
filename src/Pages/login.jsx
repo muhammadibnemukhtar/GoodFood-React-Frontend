@@ -5,7 +5,7 @@ import AuthContext from "../Context/makeContext";
 import { Field, Form, Formik, ErrorMessage } from "formik";
 
 const Login = () => {
-  const { isLoggedin, login } = useContext(AuthContext);
+  const { isLoggedin, login, setIsLoggedin } = useContext(AuthContext);
   const { userDetails } = useContext(AuthContext);
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -38,6 +38,7 @@ const Login = () => {
       login();
       console.log("login success");
       navigate("/home");
+      setIsLoggedin(true);
     } else {
       setError("Invalid Credentials");
     }

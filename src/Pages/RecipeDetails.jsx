@@ -27,9 +27,9 @@ const RecepieDetail = () => {
   }, []);
 
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
+    <div className="flex h-screen w-screen items-center justify-center bg-[url('./assets/details_bg.jpg')] bg-cover shadow-lg bg-center overflow-auto">
       {detail.data ? (
-        <div className="flex flex-col justify-evenly bg-red-500 w-3/5 mt-40 rounded-3xl py-7 overflow-hidden">
+        <div className="flex flex-col justify-evenly bg-red-500 w-4/6 h-auto rounded-3xl py-7 mt-28 scale-75">
           {/* <h1 className="text-white font-bold text-5xl">Detail Page</h1> */}
           <h2 className="text-white font-bold text-4xl text-center mb-7">
             {detail.data.name || detail.data.title}

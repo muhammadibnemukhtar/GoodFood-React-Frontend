@@ -3,7 +3,7 @@ const Category = (props) => {
     <div className="flex flex-col items-center justify-between h-auto w-80">
       <h2
         onClick={props.clickhandler}
-        className="text-white font-bold text-lg mb-3"
+        className="text-white font-bold text-base mb-3"
       >
         Recipe Name: {props.name || props.title}
       </h2>
