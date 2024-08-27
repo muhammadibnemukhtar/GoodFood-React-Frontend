@@ -48,7 +48,7 @@ const Recipes = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-5 mt-5">
         {filteredItems.map((element) => {
           return (
-            <div className="m-5 bg-red-500 transition-transform transform hover:scale-105 mx-auto p-4 rounded-2xl">
+            <div className="m-5 bg-red-500 transition-transform transform hover:scale-105 duration-500 mx-auto p-4 rounded-2xl">
               <Category
                 className="flex flex-col items-center justify-center"
                 name={element.name || element.title}

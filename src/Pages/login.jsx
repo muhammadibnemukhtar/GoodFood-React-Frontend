@@ -38,7 +38,6 @@ const Login = () => {
       login();
       console.log("login success");
       navigate("/home");
-      setIsLoggedin(true);
     } else {
       setError("Invalid Credentials");
     }

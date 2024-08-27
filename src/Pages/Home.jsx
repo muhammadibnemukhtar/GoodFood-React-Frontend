@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+import Home_Catagory from "../Components/home_Catagory";
 
 const Home = () => {
   const Navigate = useNavigate();
@@ -12,22 +13,39 @@ const Home = () => {
       <div className="bg-[url('./assets/logo.png')] bg-cover bg-center h-16 w-72 my-2">
         <></>
       </div>
-      <div className="bg-red-500 w-screen h-10 flex items-center justify-start pb-0.5">
-        <Link to={"/"} className="pl-10 mx-10 font-semibold text-white text-lg">
-          Home
-        </Link>
-        <Link
-          to={"/Recipes"}
-          className="mx-10 font-semibold text-white text-lg"
-        >
-          Recipes
-        </Link>
-        <Link to={"/"} className="mx-10 font-semibold text-white text-lg">
-          Login
-        </Link>
-        <Link to={"/signup"} className="mx-10 font-semibold text-white text-lg">
-          Signup
-        </Link>
+      <div className="bg-red-500 w-screen h-10 flex items-center justify-start">
+        <div className="flex items-center justify-center transition-color duration-500 hover:bg-white rounded-full px-4 mr-10 ml-20 h-5/6 ">
+          <Link
+            to={"/"}
+            className=" font-semibold text-white text-lg hover:text-red-500 transition-color duration-500"
+          >
+            Home
+          </Link>
+        </div>
+        <div className="flex items-center justify-center transition-color duration-500 hover:bg-white rounded-full px-4 mr-10 h-5/6">
+          <Link
+            to={"/Recipes"}
+            className="font-semibold text-white text-lg hover:text-red-500 transition-color duration-500"
+          >
+            Recipes
+          </Link>
+        </div>
+        <div className="flex items-center justify-center transition-color duration-500 hover:bg-white rounded-full px-4 mr-10 h-5/6">
+          <Link
+            to={"/"}
+            className="font-semibold text-white text-lg hover:text-red-500 transition-color duration-500"
+          >
+            Login
+          </Link>
+        </div>
+        <div className="flex items-center justify-center transition-color duration-500 hover:bg-white rounded-full px-4 mr-10 h-5/6">
+          <Link
+            to={"/signup"}
+            className="font-semibold text-white text-lg hover:text-red-500 transition-color duration-500"
+          >
+            Signup
+          </Link>
+        </div>
       </div>
       <div className="bg-[url('./assets/headline.jpg')] bg-cover bg-top h-96 w-screen flex items-center justify-start">
         <div className="h-full w-2/5 text-wrap flex flex-col items-start justify-center ml-24">
@@ -41,6 +59,18 @@ const Home = () => {
             All Recipes
           </button>
         </div>
+      </div>
+      <div className="flex flex-col items-start justify-center">
+        <h1 className="text-3xl font-bold text-red-500 mt-7 ml-7">PAKISTANI</h1>
+        <Home_Catagory cuisine={"Pakistani"} />
+      </div>
+      <div className="flex flex-col items-start justify-center">
+        <h1 className="text-3xl font-bold text-red-500 mt-7 ml-7">Italian</h1>
+        <Home_Catagory cuisine={"Italian"} />
+      </div>
+      <div className="flex flex-col items-start justify-center">
+        <h1 className="text-3xl font-bold text-red-500 mt-7 ml-7">American</h1>
+        <Home_Catagory cuisine={"American"} />
       </div>
     </div>
   );
