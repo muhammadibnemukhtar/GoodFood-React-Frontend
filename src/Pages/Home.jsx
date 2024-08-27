@@ -5,12 +5,12 @@ const Home = () => {
   const Navigate = useNavigate();
 
   const handleClick = () => {
-    Navigate("/Recipes");
+    Navigate("/Recipe");
   };
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="bg-[url('./assets/logo.png')] bg-cover bg-center h-16 w-72 my-2">
+      <div className="bg-[url('./assets/logo.png')] bg-cover bg-center h-16 w-72 mb-2 mt-3">
         <></>
       </div>
       <div className="bg-red-500 w-screen h-10 flex items-center justify-start">

@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import AuthContext from "../Context/makeContext";
+import { useNavigate } from "react-router-dom";
 
 const Home_Catagory = (props) => {
   const { catagory } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const catagoryFilter = catagory.filter((element) => {
     if (element.cuisine === props.cuisine) {
@@ -38,7 +40,12 @@ const Home_Catagory = (props) => {
                 <h2 className="text-white text-sm font-semibold m-2">
                   Serving: {element.servings}
                 </h2>
-                <button className="text-red-500 bg-white font-semibold rounded-3xl h-1/6 w-full">
+                <button
+                  onClick={() => {
+                    navigate("/RecipeDetail/" + element.newID);
+                  }}
+                  className="text-red-500 bg-white font-semibold rounded-3xl h-1/6 w-full active:scale-95"
+                >
                   Detail
                 </button>
               </div>
